@@ -3,4 +3,5 @@ pathlib
 pillow
 torch 
 torchvision
+torch-summary
 # nsfw-detector
