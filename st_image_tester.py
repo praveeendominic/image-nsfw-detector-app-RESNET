@@ -40,6 +40,7 @@ if image_uploaded is not None:
     fname=os.path.splitext(image_uploaded.name)
     file_ext=fname[1]
     fname_u='tmp'+file_ext
+    image_uploaded.name = fname_u
     # st.write(fname_u)
     
     # saving file
@@ -77,6 +78,9 @@ if image_uploaded is not None:
             result = 'NSFW'
         else:
             result = 'SAFE'
+
+        path = pathlib.Path(image_uploaded.name)
+        path.unlink()
 
         return result
     
