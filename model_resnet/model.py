@@ -2,6 +2,7 @@ import config
 from torchvision import models
 import torch.nn as nn
 from torchsummary import summary
+import torch
 
 # preprocessing done in dataset_prep
 def resnet_model_50():
@@ -18,7 +19,8 @@ def resnet_model_50():
     fc = nn.Linear(in_features = in_features, out_features = config.N_CLASSES)
     resnet.fc = fc
 
-    summary(resnet.to(config.DEVICE), input_size = (3, 224, 224))
+    # summary(resnet.to(config.DEVICE), input_size = (3, 224, 224))
+    summary(resnet.to(torch.device('cpu')), input_size = (3, 224, 224))
 
     return (resnet)
 
