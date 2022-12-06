@@ -1,6 +1,3 @@
 streamlit
 pathlib
-pillow
-torch 
-torchvision
-# nsfw-detector
+nsfw-detector
