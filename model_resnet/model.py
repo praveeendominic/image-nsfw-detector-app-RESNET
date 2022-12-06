@@ -7,7 +7,9 @@ import torch
 # preprocessing done in dataset_prep
 def resnet_model_50():
 
-    resnet = models.resnet50(pretrained = True)
+    # resnet = models.resnet50(pretrained = True)
+    resnet = models.resnet50(weights="ResNet50_Weights.IMAGENET1K_V1")
+
 
     # Already Trained Parameters will not train
     for param in resnet.parameters():

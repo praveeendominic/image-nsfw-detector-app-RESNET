@@ -4,4 +4,6 @@ pillow
 torch 
 torchvision
 torch-summary
+tensorflow-cpu
+opencv-python
 # nsfw-detector

@@ -12,3 +12,4 @@ TESTING_FILE = 'Input/test/'
 OUT = '../Output/'
 LEARNING_RATE = 0.0001
 N_CLASSES = 5
+
