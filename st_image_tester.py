@@ -1,6 +1,7 @@
 
 import streamlit as st
 import os
+os.environ["CUDA_VISIBLE_DEVICES"]=""
 
 import pathlib
 from pathlib import Path
@@ -68,7 +69,7 @@ if image_uploaded is not None:
         img=Image.open(file_path)
         input=transform_data(img)
         input = input.unsqueeze(0)
-        input = input.cuda()
+        # input = input.cuda()
 
         predictions = model_resnet(input)
 
